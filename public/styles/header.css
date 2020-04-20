@@ -1,0 +1,10 @@
+header {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background-color: aliceblue;
+  background-image: url("../images/45-degree-fabric-light.png");
+  background-repeat: repeat;
+  margin-top: 120px;
+}

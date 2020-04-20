@@ -1,0 +1,32 @@
+.new-tweet {
+  width: 50%;
+  margin: 0px auto;
+}
+
+
+form textarea {
+  display: block;
+  width: 100%;
+  margin: 10px 0px 10px 0px;
+  background-color: #f4f1ec;
+
+  border-width: 0px;
+  border-bottom-style: outset;
+  border-bottom-color: black;
+  border-bottom-width: 7px;
+
+}
+
+.container button {
+  background-color: #4056A1;
+  color: white;
+  font-family: 'Bungee', cursive;
+  border: 0px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.counter {
+  float: right;
+  font-family: 'Bungee', cursive;
+}

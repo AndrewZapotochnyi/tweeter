@@ -22,11 +22,17 @@
     <!-- New Tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+    <!-- Tweet Feed CSS -->
+    <link rel="stylesheet" href="/styles/tweet-feed.css" type="text/css" />
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+
+    <!-- Character Count JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -50,7 +56,6 @@
     <main class="container">
 
       <section class="new-tweet">
-
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST">
           <label for="tweet-text">What are you humming about?</label>
@@ -59,6 +64,37 @@
           <output name="counter" class="counter" for="tweet-text">140</output>
         </form>
       </section>
+
+      <section class="tweet-container">
+        
+        <article class="tweet-article"> 
+          <header class="tweet-header">
+            <img src="images/noun_avatar_453369.png">
+            <p class="user-name">Newton</p>
+            <p class="user-handle">@SirIsaac</p>
+          </header>
+            <p class="tweet-post">If I have seen further it is by standing on the shoulders of giants. If I have seen further it is by standing on the shoulders of giants.</p>
+          <footer>
+            <p>10 days ago</p>
+            <span><img src="images/flag.png"><img src="images/repost.png"><img src="images/like.png"></span>
+          </footer>
+        </article>
+
+        <article class="tweet-article"> 
+          <header class="tweet-header">
+            <img src="images/noun_avatar_453369.png">
+            <p class="user-name">Newton</p>
+            <p class="user-handle">@SirIsaac</p>
+          </header>
+            <p class="tweet-post">If I have seen further it is by standing on the shoulders of giants. If I have seen further it is by standing on the shoulders of giants.</p>
+          <footer>
+            <p>10 days ago</p>
+            <span><img src="images/flag.png"><img src="images/repost.png"><img src="images/like.png"></span>
+          </footer>
+        </article>
+
+      </section>
+
 
     </main>
   </body>

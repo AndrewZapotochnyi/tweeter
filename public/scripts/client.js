@@ -65,10 +65,40 @@ $(document).ready(function() {
   // Test / driver code (temporary)
    // to see what it looks like
   //$('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+  
 
+
+
+
+  $("#submit-form").submit(function(event){
+    event.preventDefault();
+
+    // let tweetText = $("#tweet-text").val();
+
+    let tweetForm = $("#submit-form").serialize();
+    // tweetText = tweetText.serialize();
+    
+    console.log(tweetForm);
+
+    $.ajax({
+      url: `/tweets`,
+      type: "POST",
+      dataType: "text",
+      data: tweetForm
+    })
+    .then((response) => {
+      console.log("ajax done");
+    });
+
+    
+  });
+  
 
 
 });
+
+
+
 
 
 

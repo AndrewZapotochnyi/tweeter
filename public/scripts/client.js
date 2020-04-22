@@ -16,6 +16,8 @@ $(document).ready(function() {
     let date = tweetObject.created_at;
     var s = new Date(date).toLocaleDateString("en-US")
     
+    let escapedText = $("<div>").text(tweetPost).html();
+    
     
     const $tweet = $(`<article class="tweet-article"> 
     <header class="tweet-header">
@@ -23,7 +25,7 @@ $(document).ready(function() {
       <p class="user-name">${name}</p>
       <p class="user-handle">${handle}</p>
     </header>
-      <p class="tweet-post">${tweetPost}</p>
+      <p class="tweet-post">${escapedText}</p>
     <footer>
       <p>${s}</p>
       <span><img src="images/flag.png"><img src="images/repost.png"><img src="images/like.png"></span>

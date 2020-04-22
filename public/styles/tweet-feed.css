@@ -53,6 +53,10 @@ article > p {
   overflow: auto;
 }
 
+.tweet-post {
+  word-wrap: break-word;
+}
+
 article > footer {
   margin-left: 10px;
   margin-right: 10px;

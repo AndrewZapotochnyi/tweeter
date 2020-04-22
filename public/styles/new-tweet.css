@@ -4,7 +4,6 @@
 
 }
 
-
 form textarea {
   display: block;
   width: 100%;
@@ -34,4 +33,28 @@ form textarea {
 .counter {
   float: right;
   font-family: 'Bungee', cursive;
+}
+
+#error-message {
+  margin-top: 15px;
+  padding: 20px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #ff0000;
+
+  display: flex;
+  justify-content: flex-start;
+
+  color: red;
+
+}
+
+#error-message span {
+  margin-top: 10px;
+}
+
+#error-message img {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
 }

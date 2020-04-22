@@ -5,7 +5,27 @@
  */
 
 $(document).ready(function() {
-  // --- our code goes here ---
+  
+  // ERROR HANDLING
+
+  const createErrorElement = function(errorText) {
+    const $error = $(`<div id="error-message">
+    <img src="/images/error.png">
+    <span>${errorText}</span>
+    </div>`);
+    return $error;
+  };
+
+  const renderError = function(error) {
+    let errorPost = createErrorElement(error);
+    $(".new-tweet").prepend(errorPost).hide().slideDown();
+  }
+
+  // renderError("Whatever error you want");
+
+  // ---------------------------------------- //
+
+
 
   // 
   const createTweetElement = function(tweetObject) {
@@ -34,6 +54,8 @@ $(document).ready(function() {
     
     return $tweet; 
   }
+  
+  
 
   const renderTweets = function(tweetArray) {
     for (let tweet of tweetArray) {
@@ -65,13 +87,20 @@ $(document).ready(function() {
 
     let input = $("#tweet-text").val();
 
+    $('#error-message').slideUp("fast", function() {
+      $(this).remove();
+    });
+
+
     if (input === null || input === "") {
-      alert("Type something");
+      // alert("Type something");
+      renderError("Type something before posting!");
       return false;
     }
 
     if (input.length > 140) {
-      alert("Tweet is too long");
+      // alert("Tweet is too long");
+      renderError("The tweet is too long!");
       return false;
     }
     
@@ -91,6 +120,11 @@ $(document).ready(function() {
 
     
   });
+
+
+
+  
+
 
 });
 

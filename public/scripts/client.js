@@ -41,42 +41,13 @@ $(document).ready(function() {
     }
   }
 
-  // Test / driver code (temporary). Eventually will get this from the server.
-  const tweetData = {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@SirIsaac"
-      },
-    "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-    "created_at": 1461116232227
-  }
-
-  let tweetArray = [tweetData, tweetData, tweetData];
-  //console.log();
-
-  renderTweets(tweetArray);
-
-  // const $tweet = createTweetElement(tweetData);
   
-
-  // Test / driver code (temporary)
-   // to see what it looks like
-  //$('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-  
-
-
 
 
   $("#submit-form").submit(function(event){
     event.preventDefault();
 
-    // let tweetText = $("#tweet-text").val();
-
     let tweetForm = $("#submit-form").serialize();
-    // tweetText = tweetText.serialize();
     
     console.log(tweetForm);
 
@@ -93,6 +64,16 @@ $(document).ready(function() {
     
   });
   
+
+
+  let loadTweets = function() {
+    $.ajax('/tweets', { method: 'GET' })
+    .then(function (response) {
+      renderTweets(response);
+    });
+  };
+
+  loadTweets();
 
 
 });

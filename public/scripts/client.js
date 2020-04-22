@@ -7,8 +7,7 @@
 $(document).ready(function() {
   // --- our code goes here ---
 
-
-
+  // 
   const createTweetElement = function(tweetObject) {
     let name = tweetObject.user.name;
     let avatar = tweetObject.user.avatars;
@@ -47,9 +46,21 @@ $(document).ready(function() {
   $("#submit-form").submit(function(event){
     event.preventDefault();
 
-    let tweetForm = $("#submit-form").serialize();
+    let input = $("#tweet-text").val();
+
+    if (input === null || input === "") {
+      alert("Type something");
+      return false;
+    }
+
+    if (input.length > 140) {
+      alert("Tweet is too long");
+      return false;
+    }
     
-    console.log(tweetForm);
+
+
+    let tweetForm = $("#submit-form").serialize();
 
     $.ajax({
       url: `/tweets`,
@@ -58,7 +69,7 @@ $(document).ready(function() {
       data: tweetForm
     })
     .then((response) => {
-      console.log("ajax done");
+      // console.log("ajax done");
     });
 
     

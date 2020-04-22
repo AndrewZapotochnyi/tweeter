@@ -8,3 +8,11 @@ body > header {
   background-repeat: repeat;
   margin-top: 120px;
 }
+
+.main-avatar > img {
+  margin-top: 20px;
+}
+
+.main-name > h2 {
+  margin: auto;
+}

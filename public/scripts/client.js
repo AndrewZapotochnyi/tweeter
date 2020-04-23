@@ -5,6 +5,9 @@
  */
 
 $(document).ready(function() {
+
+
+  
   
   // ERROR HANDLING
 
@@ -121,10 +124,13 @@ $(document).ready(function() {
   });
 
 
+  let newTweetShow = false;
 
-  $("#new-tweet-button").click(function() {
-    // $('body').scrollTo('.new-tweet');
-    console.log("Hello");
+  $("#new-post-button").click(function() {
+
+
+    $(".new-tweet").slideToggle();
+
   });
   
  

@@ -9,19 +9,27 @@ nav {
   color: #FFFFFF;
   padding-left:1.5em;
   padding-right:1.5em;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav span {
   display: block;
   vertical-align: middle;
-  position: relative;
+ 
   top: 40%;
   font-family: 'Bungee', cursive;
   font-size: larger;
  }
 
- nav p {
+ nav button {
   text-align: right;
+  height: 50px;
+  border-width: 0px;
+  background-color: Transparent;
+  color: white;
  }
 
   /* Another tablet breakpoint is maximum width of 1024px */

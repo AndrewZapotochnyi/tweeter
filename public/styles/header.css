@@ -3,7 +3,7 @@ body > header {
   width: 100%;
   position: relative;
   text-align: center;
-  background-color: aliceblue;
+  background-color: #D69922;
   background-image: url("../images/45-degree-fabric-light.png");
   background-repeat: repeat;
   margin-top: 120px;
@@ -18,7 +18,7 @@ body > header {
   color: white;
 }
 
-/* Another tablet breakpoint is maximum width of 1024px */
+/* Tablet & Movile - maximum width of 1024px */
 @media only screen and (max-width: 1024px) {
   body > header {
     margin-top: 0px;
@@ -30,6 +30,13 @@ body > header {
     margin-top: 120px;
   }
 
-  /* Write CSS rules that target Tablets screen sizes downwards - including smartphones */
 }
 
+/* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width: 1024px) {
+ body > header {
+   margin-top: 200px;
+   margin-left: 50px;
+   width: 40%;
+ }
+}

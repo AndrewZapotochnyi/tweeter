@@ -31,4 +31,18 @@ body {
    /* text-align: center; */
  }
 
+
+/* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+
+  .container {
+    width: 60%;
+    margin-top: 150px;
+  }
+
+
+}
  

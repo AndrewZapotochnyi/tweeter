@@ -37,6 +37,7 @@ form textarea {
 
 #error-message {
   margin-top: 15px;
+  margin-bottom: 15px;
   padding: 20px;
   border-style: solid;
   border-width: 3px;

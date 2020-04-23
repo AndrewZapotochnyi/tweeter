@@ -6,10 +6,7 @@
 
 $(document).ready(function() {
 
-
-  
-  
-  // ERROR HANDLING
+  // ERROR HANDLING ----------------------------------------
 
   const createErrorElement = function(errorText) {
     const $error = $(`<div id="error-message">
@@ -24,13 +21,10 @@ $(document).ready(function() {
     $(".new-tweet").prepend(errorPost).hide().slideDown();
   }
 
-  // renderError("Whatever error you want");
+  // -------------------------------------------------------
 
-  // ---------------------------------------- //
+  // CREATING A NEW POST WITH JQUERY -----------------------
 
-
-
-  // 
   const createTweetElement = function(tweetObject) {
     let name = tweetObject.user.name;
     let avatar = tweetObject.user.avatars;
@@ -56,8 +50,9 @@ $(document).ready(function() {
     
     return $tweet; 
   }
+  // -------------------------------------------------------
   
-  
+  // RENDERING TWEETS FROM JQUERY OBJECT -------------------
 
   const renderTweets = function(tweetArray) {
     for (let tweet of tweetArray) {
@@ -65,8 +60,10 @@ $(document).ready(function() {
       $('#tweets-container').prepend(newPost);
     }
   }
+  // -------------------------------------------------------
 
-  
+  // POSTING TWEETS FROM ARRAY or POSTING NEW TWEET --------
+
   let loadTweets = function(latestTweet = false) {
     $.ajax('/tweets', { method: 'GET' })
     .then(function (response) {
@@ -83,6 +80,9 @@ $(document).ready(function() {
   };
   loadTweets();
   
+  // -------------------------------------------------------
+
+  // SUBMITING NEW TWEET ON FORM SUBMISSION EVENT ----------
 
   $("#submit-form").submit(function(event){
     event.preventDefault();
@@ -93,15 +93,12 @@ $(document).ready(function() {
       $(this).remove();
     });
 
-
     if (input === null || input === "") {
-      // alert("Type something");
       renderError("Type something before posting!");
       return false;
     }
 
     if (input.length > 140) {
-      // alert("Tweet is too long");
       renderError("The tweet is too long!");
       return false;
     }
@@ -121,24 +118,21 @@ $(document).ready(function() {
     });
 
     
+    $(".counter").val("140");
+ 
   });
 
+  // -------------------------------------------------------
 
-  let newTweetShow = false;
+  // NEW TWEET FORM TOGGLE ON CLICK  -----------------------
 
   $("#new-post-button").click(function() {
-
-
     $(".new-tweet").slideToggle();
-
+    $("#tweet-text").focus();
   });
+
+  // -------------------------------------------------------
   
- 
-
-
-  
-
-
 });
 
 

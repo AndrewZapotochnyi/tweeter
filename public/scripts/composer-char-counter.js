@@ -9,7 +9,7 @@ $(document).ready(function() {
     if (currentCount < 0) {
       counter.css("color", "red");
     } else if (currentCount > 0) {
-      counter.css("color", "black");
+      counter.css("color", "#545149");
     }
     
     $(counter).text(currentCount);

@@ -34,7 +34,6 @@ $(document).ready(function() {
     let handle = tweetObject.user.handle;
     let tweetPost = tweetObject.content.text;
     let date = tweetObject.created_at;
-    var s = new Date(date).toLocaleDateString("en-US")
     
     let escapedText = $("<div>").text(tweetPost).html();
     
@@ -47,7 +46,7 @@ $(document).ready(function() {
     </header>
       <p class="tweet-post">${escapedText}</p>
     <footer>
-      <p>${s}</p>
+      <p>${timeago.format(date)}</p>
       <span><img src="images/flag.png"><img src="images/repost.png"><img src="images/like.png"></span>
     </footer>
     </article>`);

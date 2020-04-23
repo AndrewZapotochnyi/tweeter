@@ -15,4 +15,21 @@ body > header {
 
 .main-name > h2 {
   margin: auto;
+  color: white;
 }
+
+/* Another tablet breakpoint is maximum width of 1024px */
+@media only screen and (max-width: 1024px) {
+  body > header {
+    margin-top: 0px;
+    height: 500px;
+    background-color: #D69922;
+  }
+
+  .main-avatar > img {
+    margin-top: 120px;
+  }
+
+  /* Write CSS rules that target Tablets screen sizes downwards - including smartphones */
+}
+

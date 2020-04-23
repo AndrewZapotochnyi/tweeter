@@ -123,6 +123,14 @@ $(document).ready(function() {
 
 
 
+  $("#new-tweet-button").click(function() {
+    // $('body').scrollTo('.new-tweet');
+    console.log("Hello");
+  });
+  
+ 
+
+
   
 
 
